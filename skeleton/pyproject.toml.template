@@ -1,0 +1,13 @@
+[project]
+name = "my-site"
+version = "0.1.0"
+description = "A static site built with hardboiled"
+requires-python = ">=3.11"
+dependencies = [
+    "hardboiled",
+]
+
+[project.optional-dependencies]
+dev = [
+    "watchdog>=3.0",
+]

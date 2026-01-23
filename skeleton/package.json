@@ -1,0 +1,12 @@
+{
+  "name": "my-site",
+  "version": "1.0.0",
+  "scripts": {
+    "css": "npx tailwindcss -i src/static/css/styles.css -o build/css/styles.css",
+    "css:watch": "npx tailwindcss -i src/static/css/styles.css -o build/css/styles.css --watch",
+    "build": "npm run css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4"
+  }
+}

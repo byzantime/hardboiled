@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Build
+build/
+node_modules/
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# uv
+uv.lock

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock %}" />
+    <link rel="canonical" href="{{ SITE_URL }}{% block canonical %}{% endblock %}" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    {% block head %}{% endblock %}
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    {% block content %}{% endblock %}
+
+    <footer class="py-8 text-center text-gray-500 text-sm">
+      <p>&copy; {{ current_year }} {{ SITE_NAME }}. All rights reserved.</p>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
