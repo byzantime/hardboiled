@@ -58,8 +58,11 @@ class SiteBuilder:
 
         exclude_patterns = exclude_patterns or []
 
+        static_dest = self.build_dir / "static"
+        static_dest.mkdir(parents=True, exist_ok=True)
+
         for item in self.static_dir.iterdir():
-            dest = self.build_dir / item.name
+            dest = static_dest / item.name
 
             # Check if item matches any exclude pattern
             should_exclude = any(item.match(pattern) for pattern in exclude_patterns)
