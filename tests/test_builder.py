@@ -79,8 +79,8 @@ class TestSiteBuilder:
         builder.ensure_build_dirs()
         builder.copy_static_assets()
 
-        assert (builder.build_dir / "style.css").exists()
-        assert (builder.build_dir / "css" / "main.css").exists()
+        assert (builder.build_dir / "static" / "style.css").exists()
+        assert (builder.build_dir / "static" / "css" / "main.css").exists()
 
     def test_copy_static_assets_with_exclude(self, temp_project):
         """Test copy_static_assets excludes specified patterns."""
@@ -88,8 +88,8 @@ class TestSiteBuilder:
         builder.ensure_build_dirs()
         builder.copy_static_assets(exclude_patterns=["*.css"])
 
-        assert not (builder.build_dir / "style.css").exists()
-        assert (builder.build_dir / "css" / "main.css").exists()
+        assert not (builder.build_dir / "static" / "style.css").exists()
+        assert (builder.build_dir / "static" / "css" / "main.css").exists()
 
     def test_render_template(self, temp_project):
         """Test render_template renders and writes a template."""
