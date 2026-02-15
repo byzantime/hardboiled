@@ -12,7 +12,7 @@ def build_site():
     Config.load_env()
 
     builder = SiteBuilder()
-    builder.ensure_build_dirs()
+    builder.ensure_build_dirs(subdirs=["static/css"])
     builder.copy_static_assets()
 
     # Add global template variables

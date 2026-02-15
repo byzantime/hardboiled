@@ -10,9 +10,14 @@ node_modules/
 # Environment
 .env
 
+# Netlify
+.netlify/
+
 # IDE
 .idea/
 .vscode/
+*.sublime-project
+*.sublime-workspace
 
 # uv
 uv.lock
